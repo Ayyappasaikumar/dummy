@@ -8,20 +8,20 @@
 		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
 		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
 	<munit:config name="dummy-test-suite.xml" />
-	<munit:test name="dummy-test-suite-dummyFlowTest" doc:id="63b2e290-5665-4deb-89f3-d6d23ac157e4" description="Test">
+	<munit:test name="dummy-test-suite-dummyFlowTest" doc:id="e2c8291b-2cd9-4440-a0ea-24aaa45a33b2" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow-ref to dummyFlow" doc:id="683b00ea-50a0-4f9a-ac1c-c9f95dffa769" name="dummyFlow"/>
+			<flow-ref doc:name="Flow-ref to dummyFlow" doc:id="f0af9920-1986-476d-b969-11f911629bc0" name="dummyFlow"/>
 		</munit:execution>
 		<munit:validation >
-			<munit-tools:assert-equals doc:name="Assert equals" doc:id="c2324793-f3d6-4692-9e98-44b5281d1821" actual="#[payload]" expected='#["hi dummy"]' message="yes it is"/>
+			<munit-tools:assert-equals doc:name="Assert equals" doc:id="f7689e0c-c299-4afe-830f-8c58fd513b7a" actual="#[payload]" expected='#["hi dummy"]' message="Give payload properly"/>
 		</munit:validation>
 	</munit:test>
-	<munit:test name="dummy-test-suite-dummyFlowTest1" doc:id="36934925-4f37-40a3-bf68-08457740d6b4" description="Test">
+	<munit:test name="dummy-test-suite-dummyFlowTest1" doc:id="8eb38978-1af2-4db4-8b34-e34c75dee191" description="Test">
 		<munit:execution >
-			<flow-ref doc:name="Flow-ref to dummyFlow" doc:id="76ee0b89-ef45-45e3-b3df-d2a12f31abab" name="dummyFlow"/>
+			<flow-ref doc:name="Flow-ref to dummyFlow" doc:id="c00df9df-95ff-4814-b883-f6aad068a282" name="dummyFlow"/>
 		</munit:execution>
 		<munit:validation >
-			<munit-tools:assert-that doc:name="Assert that" doc:id="0411268d-aeb8-4e4d-8af4-6a17b1c60a90" message="failed " expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
+			<munit-tools:assert-that doc:name="Assert that" doc:id="c4c63414-f216-45a4-baa2-591dfddfe3ff" message="failed payload" expression="#[payload]" is="#[MunitTools::notNullValue()]"/>
 		</munit:validation>
 	</munit:test>
 
